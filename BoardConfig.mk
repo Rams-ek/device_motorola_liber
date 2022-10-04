@@ -27,6 +27,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG := liber-perf_defconfig
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
