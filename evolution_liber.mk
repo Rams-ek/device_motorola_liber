@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2017-2020 The evolutionX Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,11 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from liber device
 $(call inherit-product, device/motorola/liber/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common EvolutionX stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_liber
+PRODUCT_NAME := evolution_liber
 PRODUCT_DEVICE := liber
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Motorola One Fusion+
@@ -39,9 +39,11 @@ TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # Build info
-BUILD_FINGERPRINT := "motorola/liber_retail/liber:11/RPIS31.Q2-42-25-1/19a8e:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=liber_retail \
     PRIVATE_BUILD_DESC="liber_retail-user 11 RPIS31.Q2-42-25-1 19a8e release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+#Ex-features
+TARGET_SUPPORTS_QUICK_TAP := true

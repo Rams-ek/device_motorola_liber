@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2017-2020 The EvolutionX Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,6 +29,7 @@ $(call inherit-product, vendor/motorola/liber/liber-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-evolution \
     $(LOCAL_PATH)/overlay-lineage
 
 # Audio
